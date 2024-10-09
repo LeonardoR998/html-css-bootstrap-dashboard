@@ -23,309 +23,167 @@
     <link rel="icon" type="image/x-icon" href="./logo-boolean.ico" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./img/duck.png" alt="Bootstrap" width="100%" height="60" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Catalogo Libri</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Anagrafica Utenti</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Storico Prestiti</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Help</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-6">
-          <h3>Catalogo Libri</h3>
-        </div>
-        <div class="col-6">
-          <div class="text-end">
-            <button type="button" class="btn btn-primary">
-              Aggiungi Libro
-            </button>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/duck.png"
+              alt="Bootstrap"
+              width="100%"
+              height="60"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Catalogo Libri</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Anagrafica Utenti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Storico Prestiti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Help</a>
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="h2 fw-bold my-5">Nuovo Libro</h1>
+        <!-- AUTHOR -->
+        <div class="row">
+          <div class="col-6">
+            <h5>Nome Autore</h5>
+
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Inserisci il nome"
+              aria-label="default input example"
+            />
+          </div>
+          <div class="col-6">
+            <h5>Nome Autore</h5>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Inserisci il cognome"
+              aria-label="default input example"
+            />
+          </div>
+        </div>
+
+        <!-- TITLE BOOKS -->
+        <section class="my-3">
+          <h5>Titolo</h5>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Inserisci il titolo del libro"
+            aria-label="default input example"
+          />
+          <p class="fs-7 text-secondary">Titolo versione italiana</p>
+        </section>
+
+        <!-- GENRE BOOKS -->
+        <div class="row">
+          <div class="col-md-4 my-3">
+            <h5>Genere</h5>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Scegli il genere</option>
+              <option value="1">Romanzo Storico</option>
+              <option value="2">Thriller</option>
+              <option value="3">Giallo</option>
+              <option value="4">Fantascienza</option>
+            </select>
+          </div>
+
+          <!-- PUBLICATION  -->
+          <div class="col-md-4 my-3">
+            <h5>Anno di Pubblicazione</h5>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Inserisci l'anno"
+              aria-label="default input example"
+            />
+          </div>
+
+          <!-- ISBN -->
+          <div class="col-md-4 mt-3 mb-5">
+            <h5>ISBN#</h5>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Inserisci il codice ISBN#"
+              aria-label="default input example"
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- NOTE -->
+
+        <section class="mt-5 mb-3">
+          <h5>Note</h5>
+          <input
+            class="form-control pb-5"
+            type="text"
+            placeholder="Inserisci eventuali note sul libro"
+            aria-label="default input example"
+          />
+        </section>
+
+        <!-- CHECKBOX AND BUTTON -->
+        <section class="my-3">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Disponibile anche in digitale
+            </label>
+          </div>
+        </section>
+
+        <section class="my-3">
+          <button type="button" class="btn btn-primary">Aggiungi Libro</button>
+        </section>
       </div>
+    </main>
 
-      <table class="table table-striped mt-5">
-        <thead>
-          <tr>
-            <th scope="col">Titolo</th>
-
-            <th scope="col" class="d-none d-md-block pb-4">Data Prestito</th>
-
-            <th scope="col">Stato</th>
-            <th scope="col">Azioni</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>I pilastri della Terra</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>I Promessi Sposi</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Il Signore degli Anelli</td>
-            <td class="d-none d-md-block pb-4">18/10/2023</td>
-            <td>
-              <span class="badge rounded-pill text-bg-warning text-white"
-                >In prestito</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Harry Potter e la pietra filosofale</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success text-white"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Il Codice Da Vinci</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-danger text-white"
-                >Non Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Shining</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success text-white"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>La divina commedia</td>
-            <td class="d-none d-md-block pb-4">21/09/2023</td>
-            <td>
-              <span class="badge rounded-pill text-bg-warning text-white"
-                >In prestito</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Il trono di spade</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success text-white"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Il mondo di Sofia</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-danger text-white"
-                >Non Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
-            <td class="d-none d-md-block pb-4">25/07/2023</td>
-            <td>
-              <span class="badge rounded-pill text-bg-warning text-white"
-                >In prestito</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>Il piccolo principe</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success text-white"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>La storia infinita</td>
-            <td class="d-none d-md-block pb-4">-</td>
-            <td>
-              <span class="badge rounded-pill text-bg-success text-white"
-                >Disponibile</span
-              >
-            </td>
-            <td>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-pencil" style="color: grey"></i>
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="fa-solid fa-trash" style="color: grey"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
